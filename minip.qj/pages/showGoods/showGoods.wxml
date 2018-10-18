@@ -1,0 +1,14 @@
+<view class="wrapper">
+  <view class="pic">
+    <image mode="aspectFit" src="{{goods.img}}"></image>
+  </view>
+
+  <view class="desc">
+    <view class="name">{{goods.title}}</view>
+    <view class="price">{{goods.desc}}</view>
+  </view>
+  <button open-type='contact' session-from='{{goods.retailId}}' send-message-img="{{goods.img}}" show-message-card="true" send-message-path="../showCostume/showCostume?name={{goods.title}}&picture={{goods.img}}&url={{goods.detail}}" bindcontact='contactHandle'
+    class='details_button'>
+    咨询客服
+  </button>
+</view>

@@ -1,0 +1,34 @@
+<!-- <view class="head">
+      <view>形象顾问推荐</view>       
+  </view> -->
+<!-- <import src="../template/template" /> -->
+<scroll-view scroll-y style="height:90vh;">
+  <view class="list">
+    <block wx:for="{{list}}" wx:key="id">
+      <!-- <navigator url="../consultantDetail/consultantDetail?id={{item.id}}" > -->
+      <view bindtap='tz' id="{{item.id}}">
+        <view class="item" style='height:100px;margin:20px;box-shadow:0px 5px 5px rgb(190,214,230);background: linear-gradient(120deg, rgba(	118,163,189,1),rgba(137,187,223, 1));border-radius:3%'>
+          <view>
+            <image src="{{item.avata}}" style="margin-top:40rpx;width:50px;height:50px; border-radius: 50%;margin-left:10px;"></image>
+          </view>
+          <view class="desc">
+            <view class="title" style='color:#FFF;margin-top:20px'>{{item.name}}</view>
+            <view class="count" style='color:#FFF'>
+              <view>{{item.nametype}}</view>
+              <view class="style" wx:if="false" style='font-size:14px;margin-top:-34px;'>
+              <text style='font-size:16px;'><text style='font-weight: bold'>已回答{{item.number}}</text>个问题
+                </text>
+               
+              </view>
+              <view class="style" wx:if="false" style='font-size:14px;margin-top:-4px;'>
+               <text style='font-size:16px;'><text style='font-weight: bold'>{{item.consultation_fees}}</text>元/次
+                </text>
+                </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- </navigator>   -->
+    </block>
+  </view>
+</scroll-view>

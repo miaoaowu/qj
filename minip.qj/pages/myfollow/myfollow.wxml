@@ -1,0 +1,10 @@
+  
+  <view class="head">
+      <view>已关注的形象顾问</view>       
+  </view>
+  <import src="../template/template" />
+  <scroll-view scroll-y style="height:90vh;" >
+      <view class="list">
+          <template is="consultant" data="{{list}}"/>      
+      </view>
+  </scroll-view>

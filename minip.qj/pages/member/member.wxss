@@ -1,0 +1,211 @@
+page{
+   background:  whitesmoke
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+ 
+  box-sizing: border-box;
+}
+
+.myinfo {
+  width: 100%;
+  height: 340rpx;
+  background-size: cover;
+  background-color: snow;
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(120deg,#5DC2FA,#4ED3FF);
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+.myicon {
+  /* width: 30%;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.myicon image {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+  box-shadow: 5rpx 5rpx 10rpx #c4c4c4;
+  margin-top: -138rpx;
+}
+
+.myicon text {
+  font-size: 30rpx;
+  color: #565656;
+}
+
+.mydata {
+  width: 90%;
+  height: 140rpx;
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin-top: -30rpx;
+}
+
+.head {
+  font-size: 38rpx;
+  font-weight: 550;
+  color: #565656;
+  height: 30%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 10px;
+}
+
+.head text{
+  width: 50%;
+}
+.head image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.detail {
+  display: flex;
+  font-size: 30rpx;
+  color: #828282;
+  /* height: 50%; */
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detail view {
+  height: 50%;
+  width: 25%;
+  text-align: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10rpx;
+}
+
+.detail .state {
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 10rpx;
+}
+
+.detail .electric {
+  height: 40rpx;
+  width: 40rpx;
+  margin-left: 10rpx;
+}
+
+.myadress {
+  width: 100%;
+  color: #5daee6;
+  font-size: 28rpx;
+  font-weight: 580;
+  margin: 15rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myadress image {
+  margin: 0 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.dividingstrip {
+  height: 35rpx;
+  background-color: ghostwhite;
+}
+
+
+.service {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5%;
+ 
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+
+.roleinfo-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+
+.mynavigator {
+  
+  width: 90%;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.navitems {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx, 10rpx, 0, 10rpx;
+  text-align: center;
+  font-weight: 7500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: grey;
+  border: none;
+}
+
+.navitems view {
+  width: 150rpx;
+ 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+ 
+}
+
+.navitems view image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.dividingstrip {
+  width: 100%;
+  height: 35rpx;
+  background-color: whitesmoke;
+}

@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<!--pages/index2/index2.wxml-->
+<view class="container">
+  <view class="img">
+    <image src="../../image/qj-cover.png">
+    </image>
+  </view>
+  <!-- <view class="">
+   <view><text>奇　纪　时　尚</text></view> 
+   <view> <text>你　穿　我　搭</text></view>
+  </view> -->
+  <view>
+    <button open-type="getUserInfo" class='btn' bindgetuserinfo="getUserInfoAuthorization">开启奇纪之旅</button>
+  </view>
+  
+  <!-- 首页轮播 -->
+  <!-- <view class="myswiper" bindtap='jumpToUser'>
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="circular">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image"  />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view> -->
+  <!-- 导航按钮 -->
+  <!--
+    <view class="mynavigator">
+        <text>请选择您的身份</text>
+        <view class="navbuttons">
+            <button type="default" bindtap='jumpToUser'>会　　　　　员</button>
+            <button type="default">顾　　　　　问</button>
+            <button type="default">商　　　　　家</button>        
+        </view>
+    </view>
+    -->
+</view>

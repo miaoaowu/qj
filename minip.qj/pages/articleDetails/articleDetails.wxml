@@ -1,0 +1,28 @@
+<!--pages/collocation/collocation-details/collocation-details.wxml-->
+<view class="container">
+  <view class="page__hd">
+    <view class="page__title">服饰搭配小知识</view>
+    <!-- <view class="page__desc">文章</view> -->
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">标题</view>
+      <view class="weui-article__section">
+        <!-- <view class="weui-article__title">方案整体设计图片</view> -->
+        <view class="weui-article__section">
+          <view class="weui-article__h3">小标题</view>
+          <view class="weui-article__p">
+            <image class="weui-article__img" src="https://qj.foxcodes.cn/images/collocation/collocation0.jpg" mode="aspectFit" style="height: 420px" />
+          </view>
+          <view class="weui-article__h3">小标题</view>
+          <view class="weui-article__p">
+            能够给今天的我们留下深刻印象的穿衣高手，不论是设计师还是名人，其原因只有一个——他们创造了自己的风格。一个人不能妄谈拥有自己的一套美学，但应该有自己的审美品位。而要做到这一点，就不能被千变万化的潮流所左右，而应该在自己所欣赏的审美基调中，加入当时的时尚元素，融合成个人品位。融合了个人的气质、涵养、风格的穿着会体现出个性，而个性是最高境界的穿衣之道。
+          </view>
+          <view class="weui-article__p">
+            西方学者雅波特教授认为，在人与人的互动行为中，别人对你的观感只有7%是注意你的谈话内容，有38%是观察你的表达方式和沟通技巧（如态度、语气、形体语言等），但却有55%是判断你的外表是否和你的表现相称，也就是你看起来像不像你所表现出来的那个样子。因此，踏入职场之后，那些慵懒随意的学生形象或者娇娇女般的梦幻风格都要主动回避。随着年龄的增加、职位的改变，你的穿着打扮应该与之相称，记住，衣着是你的第一张名片。
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

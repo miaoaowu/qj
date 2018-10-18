@@ -1,0 +1,4 @@
+/* pages/setting/setting.wxss */
+.weui-cell__bd{
+  font-size: 14px;
+}

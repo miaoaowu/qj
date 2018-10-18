@@ -1,0 +1,8 @@
+<view class="container">
+  <text class="topic-group">点击下列按钮进入功能测试页面</text>
+  <button class="button-wrap" bindtap="jumpToWebview"> Webview页面 </button>
+  <button class="button-wrap" bindtap="jumpToLogs"> logs页面 </button>
+  <button class="button-wrap" bindtap="changeAuthorize"> 更改用户授权页面 </button>
+  <button class="button-wrap" bindtap="accessDB"> 访问数据库页面 </button>
+  <button class="button-wrap" bindtap="flexTest"> flex布局测试页面 </button>
+</view>

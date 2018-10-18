@@ -1,0 +1,16 @@
+/* pages/help/help.wxss */
+.mod-list-title {
+  padding: 12px 15px 12px 15px;
+  font-size: 12px;
+  height: 14px;
+  color: #6d6d6d; }
+.weui-cell__bd{
+text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}

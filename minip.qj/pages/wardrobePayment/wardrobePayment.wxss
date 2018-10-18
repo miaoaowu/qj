@@ -1,0 +1,124 @@
+.hr{
+    height: 15px;
+    background-color: #cccccc;
+    margin-top:15px;
+    opacity: 0.2; 
+}
+
+.couponDefault{
+  display: flex;
+  flex-direction: row;
+  width:85%;
+  margin-left:20px;
+  border: solid 1px #F0D290;
+  border-radius: 5px;
+  margin-top:5px;
+  height:82px;
+  box-shadow: 0px 5px 2px #cccccc
+}
+
+.couponDefault .left{
+  width:30%;
+  font-size:24px;
+  color:#F0D290;
+  background-color: #ffffff;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+ 
+}
+
+.couponDefault .right{
+  width:70%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to right,#F0B18A, #F0D290);
+}
+
+.couponDefault .right .type{
+  font-size:16px;
+ 
+   color:#ffffff;
+  padding-left: 10px;
+  padding-top: 5px
+}
+
+.couponDefault .right .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#ffffff;
+  padding-left: 10px;
+  padding-top: 5px
+ 
+  
+}
+
+.couponSelect{
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  margin-left:20px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  margin-top:5px;
+  height:82px;
+ 
+}
+
+.couponSelect .left{
+  width:30%;
+  font-size:24px;
+  color:white;
+  background-color: #CD3333;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.couponSelect .right{
+  width:70%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start
+}
+
+.couponSelect .right .type{
+  font-size:16px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color:#cccccc;
+}
+
+.couponSelect .right .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#cccccc;
+  padding-left: 5px;
+  padding-top: 5px;  
+  
+}
+
+.notice{
+  height:20px;
+  padding-left: 10px;
+  font-size:12px;  
+  color:#31B5FE;
+  display: flex; 
+  align-items: center;
+  padding-top: 5px; 
+}
+.calculate{
+   margin-top:10px;
+   margin-left:20px; 
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+}
+.calculate .item{
+   display: flex;
+   justify-content: space-between;
+   font-size: 15px;
+}

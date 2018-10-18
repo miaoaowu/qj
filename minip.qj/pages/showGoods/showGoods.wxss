@@ -1,0 +1,49 @@
+/* pages/showGoods/showGoods.wxss */
+.wrapper{
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.details_button{
+  margin: 200rpx auto;
+  width:50%;
+  height:110rpx;
+  line-height: 110rpx;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1rpx 1rpx 8rpx #c4c4c4;
+  border:none;
+}
+.item{
+  width: 100%;
+  height: 100%;
+}
+.pic {
+  display: inline-block;
+  width: 80%;
+  height: 50%;
+}
+.desc {
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  font-size: 32rpx;
+  color: #999;
+}
+.name {
+  display: inline-block;
+  height: 32rpx;
+  line-height: 32rpx;
+  align-items: center;
+  width: 100%;
+  color: black;
+}
+.price {
+  display: inline-block;
+  height: 32rpx;
+  line-height: 32rpx;
+  align-items: center;
+  color: red;
+  font-weight: 800;
+}

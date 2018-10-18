@@ -1,0 +1,152 @@
+/* pages/collocation/collocation.wxss 
+
+@import '/style/weui.wxss';
+
+*/
+page {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+
+scroll-view{
+  margin-top: 80rpx;
+}
+
+/* .section {
+  width: 36px;
+  height: 20px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+} */
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: whitesmoke;
+}
+
+.nav{
+  width: 50%;
+  height: auto;
+}
+
+.item{
+  
+  height:500rpx;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 3%;
+  box-shadow: 1rpx 1rpx 8rpx #c4c4c4;
+}
+
+.pic {
+  width: 100%;
+  height: 70%;
+  text-align: center;
+}
+
+
+.pic image {
+  width: 90%;
+  height: 90%;
+  margin: 5rpx;
+}
+
+.desc {
+  height: 30%;
+  width: 100%;
+  margin-left: 0px;
+  /* line-height: 30px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+  /* background-color: snow; */
+}
+
+.name {
+  width: 95%;
+  padding-left:20rpx; 
+  color: #FCC6A4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   font-weight: 700;
+   font-size: 28rpx;
+}
+
+.choose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120rpx;
+  margin-bottom: 4rpx;
+  width: 100%;
+  height: 8vh;
+  line-height: 1.2;
+  background-color: white;
+}
+
+.img{
+  width: 25rpx;
+  height: 15rpx;
+  margin-left: 10rpx
+}
+.section {
+  width: 30%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+picker{
+  font-size: 13px;
+}
+
+.price {
+ 
+  padding-left: 20rpx;
+  text-align: left;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.updated{
+  padding-left: 20rpx;
+}
+
+/* .choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  
+  margin-top: 4rpx;
+  margin-bottom: 4rpx;
+  width: 100%;
+  height: 8vh;
+  line-height: 1.2;
+  background-color: #efeff4;
+} */

@@ -1,0 +1,126 @@
+.wrapper{
+  position: relative;
+  display:flex; 
+  flex-direction:column;
+  width:100%;
+  background-color: rgba(204, 204, 204, 0.5);
+}
+.content{
+  background: white;
+}
+.content:not(:nth-of-type(1)) {
+  margin-top: 20rpx;
+}
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#fff;
+  margin-bottom:60rpx;
+  padding-bottom:10rpx;
+}
+
+.wardrobeItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 16px;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 10rpx;
+  border-top: 2rpx solid rgba(204, 204, 204, 0.3);
+}
+.img-box{
+ width: 100px;
+ height: 120px;
+}
+.image{
+  width: 100%;
+  height: 100%;
+}
+.num{
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  color: white;
+  background-color:#A4D3EE;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius:50%;
+  line-height: 60rpx;
+  text-align: center;
+} 
+.imageupload{
+ font-size: 14px;
+ color: #C2C2C2;
+ padding-bottom: 10rpx;
+}
+
+.label {
+  width: 40%;
+}
+
+.input {
+  width: 40%;
+  text-align: right;
+  height: 100rpx;
+}
+.input input{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.defaultcolor{
+  color:rgb(49, 181, 255)
+}
+.upload {
+  position: absolute;
+  width: 100%;
+  bottom: -250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:5px; 
+}
+.added{
+  width: 100%;
+  background: white;
+}
+.del-add{
+  display: flex;
+  flex-direction: row;
+  border-top:1rpx solid #ccc;
+  color: red;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size:14px; 
+  border-bottom:1rpx solid #ccc;
+  background-color: white;
+}
+.up1,.up2{
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.up2{
+  color:#000; 
+}
+.up2::before{
+  margin-top: 17rpx;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 68%;
+  line-height: 80rpx;
+  content: '';
+  border-right: 1rpx solid #ccc;
+}
+.upload .btn{
+  width:60%;
+  background:rgb(49,181,255);
+  color:#FFFFFF;
+  font-size:16px;
+}
+

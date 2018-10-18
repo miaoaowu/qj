@@ -1,0 +1,35 @@
+<view>
+
+ <view class="userinfo">    
+    
+        <image  class="userinfo-avatar" src="{{avatar}}" background-size="cover"></image>
+   </view>
+     <view class='userinfoall'>
+          <view class="userinfo-nickname">{{nickname}}</view>
+           <view style='text-align:center'>
+             <text  class='iteminfo'>{{personal_info.age_scope?personal_info.age_scope:'未知'}}</text>
+              <text class='iteminfo'>{{personal_info.profession?personal_info.profession:'未知'}}</text>  
+           </view>
+       </view>
+  <view class="select"  data-current='1' bindtap='switchNav'>形象特质</view>
+   <view class='swiperitem2'>
+        <view class='item' >
+         <block wx:for="{{pres}}" wx:key="{{index}}">
+          <view class='key' style="{{index == current?'color:#31B5FE':'color:gray'}};" bindtap='switchImage' data-current="{{index}}" >{{item.preX}}</view>
+         </block>
+        </view>
+        
+        <scroll-view scroll-y class='detail'>
+          <view wx:if="{{currentView=='0'}}" >{{image_info.style}}</view>
+          <view wx:elif="{{currentView=='1'}}">{{image_info.colour}}</view>
+          <view wx:elif="{{currentView=='2'}}">{{image_info.shape}}</view>
+          <view wx:elif="{{currentView=='3'}}">{{image_info.occasion}}</view>
+          <view wx:else>{{image_info.hobbies}}</view>
+        </scroll-view>
+     </view> 
+
+      <view class='phone'>
+          <view class='phonetitle'>联系方式</view>
+          <view class='value'>{{personal_info.mobile?personal_info.mobile:'未知'}}</view>
+        </view>
+</view>

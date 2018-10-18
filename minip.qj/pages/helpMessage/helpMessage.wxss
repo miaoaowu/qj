@@ -1,0 +1,27 @@
+/* pages/question/question.wxss */
+.wrapper{
+  height:100%;
+  width:100%
+}
+.q-title{
+  height: 10%;
+  width:100%;
+  position: relative;
+  padding: 15px 15px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  background: #fff;
+  font-weight: bolder; 
+  border-bottom-style:inset;
+  border-width:thin
+}
+.q-content{
+  height: 90%;
+  font-size: 15px;
+  color: #333;
+  line-height: 24px;
+  padding: 10px 15px 0 15px;
+  background: #fff;
+  text-align: justify; 
+  text-indent:2em;
+}

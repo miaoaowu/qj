@@ -1,0 +1,43 @@
+<view class='main'>
+  <view class='container'>
+    <view class='item' style='margin-top:40rpx; '>
+      <view>订单编号：</view>
+      <view class='txt'>{{order_id}}</view>
+    </view>
+    <view class='item'>
+      <view>咨询费用：</view>
+      <view class='txt'>¥{{amount_payable}}元</view>
+    </view>
+    <view class='item'>
+      <view>优惠金额：</view>
+      <view class='txt'>-¥{{discount_amount/100}}元</view>
+    </view>
+    <view class='item'>
+      <view>实付金额：</view>
+      <view class='txt'>¥{{pay_amount/100}}元</view>
+    </view>
+    <view class='option'>
+      <view>
+
+        <radio-group name="scheme" bindchange="radioChange">
+          <label>
+            <view class='pay_method'>
+              <view>余额支付 <text class='desc' wx:if="{{balance < pay_amount}}">余额不足</text></view>
+              <radio value='1' checked="{{chosed=='1'}}"></radio>
+            </view>
+            <view class='pay_method'>
+              <view>微信支付</view>
+              <radio value='2' checked="{{chosed=='2'}}"></radio>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <button class='type' style='margin-top:70px;width:400rpx;' bindtap='pay'>
+      <text style='color:white;font-size:34rpx'>确认支付</text>
+    </button>
+    <button class='type1' style='margin-top:20rpx;width:400rpx;' bindtap='cancelPayment'>
+      <text style='color:#5DC2FA;font-size:34rpx'>取消支付</text>
+    </button>
+  </view>
+</view>

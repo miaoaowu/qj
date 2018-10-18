@@ -1,0 +1,19 @@
+<scroll-view scroll-y class="show">
+  <view class="list">
+    <block wx:for="{{commodity}}" wx:key="{{index}}">
+      <button open-type='contact' session-from='{{item.retailId}}' send-message-img="{{item.picture}}" show-message-card="true" send-message-path="../showCostume/showCostume?name={{item.name}}&picture={{item.picture}}&url={{item.detail}}" bindcontact='contactHandle' class='details_button'>
+        <view class="item" id="0">
+           <view class="pic" id="{{item.picture}}">
+            <image mode="aspectFit" src="{{item.picture}}"></image>
+          </view> 
+
+          <view class="desc" id="{{index}}">
+            <view class="name">{{item.name}}</view>
+            <view class="price">{{item.priceRange}}</view>
+          </view>
+  
+        </view>
+      </button>
+    </block>
+  </view>
+</scroll-view>

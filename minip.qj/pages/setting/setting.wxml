@@ -1,0 +1,19 @@
+<!--pages/setting/setting.wxml-->
+<view class="page" style="height: 100%; background-color: ghostwhite;top:1px;margin-top:15px">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+    <navigator url="../modifyRecord/modifyRecord" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">修改个人档案</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../help/help" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">帮助</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../declaration/declaration" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">声明</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

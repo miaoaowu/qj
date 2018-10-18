@@ -1,0 +1,19 @@
+<view>
+  <view class='can_use' style='margin-left:20px;display: flex; flex-direction: row;align-items: center;'>充值套餐类型（{{length}}）
+  </view>
+
+  <scroll-view scroll-y style="height:74vh;">
+    <block wx:for="{{coupons}}" wx:key="index">
+       <view class="{{currentSelected==index?'couponSelect':'couponDefault'}}" data-id="{{index}}" bindtap='selectCoupon' wx:if="{{item.id!=2}}"> 
+        <view class='left'>充{{item.threshold/100}}元</view>
+        <view class='right'>
+          <view class='type'>送{{item.reward/100}}元</view>
+         </view> 
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class='sub' style='display:flex; justify-content: center;margin-top:30rpx'>
+    <button bindtap='submit' type="primary" style='width:400rpx;background:#31B5FE;font-size:80%;height:40px;'>提交订单</button>
+</view>

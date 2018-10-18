@@ -1,0 +1,36 @@
+<!--pages/search/index.wxml-->
+<view class='container'>
+  <view class='search-input'>
+    <view class='select_box'>
+      <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../image/展开.png'></image>
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+      </view>
+    </view>
+    <!-- <icon type='search' size='16'></icon> -->
+    <input class='search-value' placeholder='商品/文章/顾问' bindinput='changeInput' bindconfirm="searchBtn" focus='ture'></input>
+    <view class='search' bindtap='search'>搜索</view>
+  </view>
+  <scroll-view scroll-y bindscrolltolower="lower" class='search-list'>
+    <block wx:for="{{resultList}}" wx:key="index">
+      <view class='wrapper' data-id='{{item.id}}' data-data='{{item.selectType}}' data-index='{{index}}' bindtap='tapTarget'>
+        <view class='content'>
+          <view class='poster'>
+              <image  src='{{item.img}}'></image>
+          </view>
+          
+          <view class='total'>
+              <text class='title'>{{item.title}}</text>
+            <text class='desc'>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+  </scroll-view>
+
+</view>

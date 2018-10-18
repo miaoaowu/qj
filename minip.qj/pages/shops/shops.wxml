@@ -1,0 +1,57 @@
+<view class="choose">
+  <view class="section">
+    <!-- <view class="section__title">选择风格</view> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{style}}" data-column="style">
+      <view class="picker">
+        风格
+        <image class='img' src="../../image/spread.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- <view class="sep">|</view> -->
+  <view class="section">
+    <!-- <view class="section__title">选择类型</view> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{ctype}}" data-column="ctype">
+      <view class="picker">
+        类型
+        <image class='img' src="../../image/spread.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- <view class="sep">|</view> -->
+  <view class="section">
+    <!-- <view class="section__title">选择价格区间</view> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{priceRange}}" data-column="priceRange">
+      <view class="picker">
+        价位
+        <image class='img' src="../../image/spread.png"></image>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<scroll-view scroll-y class="show">
+  <view class="list">
+    <block wx:for="{{commodity}}" wx:key="{{index}}">
+      <button open-type='contact' session-from='{{commodity[index].retailId}}' send-message-img="{{commodity[index].picture}}" show-message-card="true" send-message-path="../showCostume/showCostume?name={{commodity[index].name}}&picture={{commodity[index].picture}}&url={{commodity[index].detail}}" bindcontact='contactHandle' class='details_button'>
+        <view class="item" id="0">
+          <!-- bindtap="previewImage" -->
+           <view class="pic" id="{{item.picture}}">
+            <image mode="aspectFit" src="{{item.picture}}"></image>
+          </view> 
+
+          <!-- <view class="desc" bindtap="showDetail" id="{{index}}"> -->
+          <view class="desc" id="{{index}}">
+          <view class='desc_title'>{{item.id}}</view>
+            <view class="name">{{item.name}}</view>
+            <view class="price">{{item.priceRange}}</view>
+          </view>
+          <!-- </view> -->
+        </view>
+      </button>
+
+      <!-- <view class="hr2"></view>  -->
+    </block>
+  </view>
+  
+</scroll-view>

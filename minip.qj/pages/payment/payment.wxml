@@ -1,0 +1,67 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view style="display: flex;flex-direction: row;align-items: center;margin-top:20px;">
+    <view class="" style='width:40%;margin-left:20px;font-size:75%;font-weight:bold;margin-top:15rpx'>方案是否公开</view>
+    <view style='width:60%;position: absolute;margin-left:500rpx;'>
+      <radio-group name="scheme" bindchange="radioChange" style='color:#ccc;font-size:80%'>
+        <label>
+          <radio value='1' color="#31B5FE" style='transform:scale(0.8);  ' checked="{{is_public=='1'}}">是　</radio>
+          <radio value='2' color="#31B5FE" style='transform:scale(0.8);  ' checked="{{is_public=='2'}}">否</radio>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="hr"></view>
+
+  <view>
+    <view class='can_use' bindtap='recharge' style='margin-left:20px;display: flex; flex-direction: row;align-items: center;'>可用优惠券（{{coupons.length}}）
+      <text class='txt'>使用优惠券本方案须公开</text> </view>
+
+    <scroll-view scroll-y style="height:45vh;">
+      <block wx:for="{{coupons}}" wx:key="id">
+        <view class="{{currentSelected==index ?'couponSelect':'couponDefault'}}" data-id="{{index}}" bindtap='selectCoupon'>
+          <view class='left'>¥{{item.value/100}}</view>
+          <view class='right'>
+            <view class='type'>咨询抵现卷</view>
+            <view class='effectiveData'>
+              <view>有效期至</view>
+              <view>{{item.endtime}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="hr"></view>
+
+  <view class='calculate'>
+    <view class='item' style='font-weight:bold'>*以下金额以最终支付页面为准</view>
+    <view class='item' style='margin-top:30rpx'>
+      <view>咨询费用</view>
+      <view style='color:#5DC2FA'>¥{{amount_payable}}元</view>
+    </view>
+    <view class='item' wx:if='{{isUseCoupon}}'>
+      <view>优惠金额</view>
+      <!-- <view  style='color:#5DC2FA'>-¥{{(coupons[currentSelected].value>amount_payable?amount_payable:coupons[currentSelected].value)}}元</view> -->
+      <view style='color:#5DC2FA'>-¥{{(coupons[currentSelected].value>amount_payable?coupons[currentSelected].value:amount_payable)/100}}元</view>
+      <view class='item2'>
+        <view>实付款</view>
+        <view style='color:#5DC2FA'>¥{{((amount_payable-(coupons[currentSelected].value)/100)>0?(amount_payable-(coupons[currentSelected].value)/100):0)}}元</view>
+      </view>
+    </view>
+    <view class='item' wx:else>
+      <view>实付款</view>
+      <view style='color:#5DC2FA'>¥{{((amount_payable-(isUseCoupon?coupons[currentSelected].value:0))>0?(amount_payable-(isUseCoupon?coupons[currentSelected].value:0)):0)}}元</view>
+    </view>
+
+  </view>
+
+
+
+  <view class='sub' style='display:flex; justify-content: center;margin-top:30rpx'>
+    <button formType="submit" type="primary" style='width:400rpx;background:#31B5FE;font-size:80%;height:40px;'>提交订单</button>
+  </view>
+
+</form>

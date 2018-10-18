@@ -1,0 +1,146 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.show {
+  width: 100%;
+  /* height: 82.5vh;
+  position: fixed; 
+  bottom: -20rpx;  */
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: whitesmoke;
+}
+
+.pic {
+  width: 100%;
+  height: 70%;
+}
+
+.pic image {
+  width: 100%;
+  height: 100%;
+  margin: 5rpx;
+}
+
+.desc {
+  height: 30%;
+  width: 100%;
+  margin-left: 0px;
+  /* line-height: 30px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+  /* background-color: snow; */
+}
+
+.name {
+  width: 95%;
+  text-align: center;
+  color: black;
+  white-space: nowrap;
+}
+
+.price {
+  margin-left: 10rpx;
+  text-align: left;
+  color: red;
+  font-weight: 800;
+}
+
+.click {
+
+  height: 30rpx;
+  color: #999;
+  margin-right: 10rpx;
+  line-height: 1.2;
+  text-align: right;
+   white-space: nowrap; 
+}
+
+.choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: fixed; */
+  margin-bottom: 4rpx;
+  width: 100%;
+  height: 8vh;
+  line-height: 1.2;
+  background-color: white;
+}
+
+ .section {
+  width: 30%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 10rpx
+} 
+
+.sep {
+  width: 2rpx;
+  /* background-color: black;  */
+}
+
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 12px 15px 12px 35px;
+}
+.weui-search-bar{
+  background-color: #31B5FF;
+  border-style: none 
+}
+.img{
+  width: 25rpx;
+  height: 15rpx;
+  margin-left: 10rpx
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.details_button{
+  width: 44%;
+  height: 500rpx;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 5px;
+  box-shadow: 1rpx 1rpx 8rpx #c4c4c4;
+  border:none;
+}
+.item{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,169 @@
+.hr{
+    height: 15px;
+    background-color: #cccccc;
+    margin-top:15px;
+    opacity: 0.2; 
+}
+
+.couponDefault{
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  margin-left:20px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  margin-top:5px;
+  height:60px;
+ 
+}
+ .couponDefault .left{
+  width:40%;
+  font-size:24px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+ .couponDefault .right{
+  width:60%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+   background: linear-gradient(to right,#49D3D3, #64E5F4);
+}
+
+ .couponDefault .right1{
+  width:60%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+   background: linear-gradient(to right,#F0B18A, #F0D290);
+}
+
+ .couponDefault .right2{
+  width:60%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to right,#5DC2FA, #4EDEFF);
+}
+
+ .couponDefault .right .type1{
+  font-size:12px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #ffffff;
+  
+}
+ .couponDefault .right1 .type1{
+  font-size:12px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #ffffff;
+  
+}
+ .couponDefault .right2 .type1{
+  font-size:12px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #ffffff;
+  
+} 
+
+
+ .couponDefault .right .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#ffffff;
+  padding-left: 5px;
+  padding-top: 5px; 
+   
+}
+ .couponDefault .right1 .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#ffffff;
+  padding-left: 5px;
+  padding-top: 5px; 
+   
+}
+ .couponDefault .right2 .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#ffffff;
+  padding-left: 5px;
+  padding-top: 5px; 
+   
+}
+
+
+
+.couponSelect{
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  margin-left:20px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  margin-top:5px;
+  height:60px;
+ 
+}
+
+.couponSelect .left{
+  width:30%;
+  font-size:24px;
+  color:white;
+  background-color: #CD3333;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.couponSelect .right{
+  width:70%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start
+}
+
+.couponSelect .right .type{
+  font-size:16px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color:#cccccc;
+}
+
+.couponSelect .right .effectiveData{
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  color:#cccccc;
+  padding-left: 5px;
+  padding-top: 5px;  
+  
+}
+
+.notice{
+  height:20px;
+  padding-left: 20px;
+  font-size:12px;  
+  background-color: #EEE8AA;
+  display: flex; 
+  align-items: center;  
+}
+.calculate{
+   margin-top:10px;
+   margin-left:20px; 
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+}
+.calculate .item{
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+}

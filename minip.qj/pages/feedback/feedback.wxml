@@ -1,0 +1,10 @@
+
+<view class='container'>
+    <view class='section1' >
+        <textarea placeholder="您的宝贵意见就是我们进步的源泉!"   value='{{feedback}}' bindinput='bindContentInput' maxlength='400' auto-focus/>
+    </view>
+    <view class='section2'>
+        <text>请详细描述您遇到的问题，有助于我们快速定位并解决问题，或留下您宝贵的建议或意见，我们会认真进行评估。稍后将有工作人员与您联系，谢谢！</text>
+    </view>
+    <button bindtap='submit'>问题反馈</button>
+</view>

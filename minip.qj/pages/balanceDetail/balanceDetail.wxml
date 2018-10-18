@@ -1,0 +1,16 @@
+<view class='main'>
+  <view class='container'>
+    <view class='item' style='margin-top:40px; '>
+      <view>充值：</view>
+      <view class="input">
+            <input type="digit" step="0.1" id="{{index}}" placeholder-style="color:rgb(49,181,255)" placeholder='单位：元' bindinput='getValue'></input>
+          </view>
+    </view> 
+    <view class='item'>
+      <view>实付金额：</view>
+      <view class='txt'>{{pay_amount}}元</view>
+    </view>  
+  <button class='type' style='margin-top:150px;width:400rpx;'  bindtap='pay'><text style='color:white;font-size:34rpx'>支    付</text></button>
+  <button class='type1'  style='margin-top:15px;width:400rpx;'  bindtap='cancelPayment'><text style='color:#5DC2FA;font-size:34rpx'>取消支付</text></button>
+  </view>
+</view>

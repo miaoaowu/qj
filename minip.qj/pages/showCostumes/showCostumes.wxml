@@ -1,0 +1,16 @@
+<view class="desc">
+  <view class="pic" bindtap="previewImage" id="{{picture}}">
+    <image mode="aspectFit" src="{{picture}}"></image>
+  </view>
+  <view class="name">{{name}}</view>
+
+  <view>商品购买链接
+    <view>
+      <text selectable='true'>{{url}}</text>
+    </view>
+  </view>
+
+  <view>
+    长按复制链接在其他网页中可打开商品购买
+  </view>
+</view>

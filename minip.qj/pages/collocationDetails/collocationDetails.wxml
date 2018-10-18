@@ -1,0 +1,69 @@
+<!--pages/collocation/collocation-details/collocation-details.wxml-->
+
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">咨询问题内容：</view>
+    <view class="page__desc">提问时间：{{question.updatedAt}}</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article" style="padding-left:15rpx; padding-right:15rpx;background-color:white;">
+
+      <view class="weui-article__section" style="margin-bottom:20rpx;">
+        <view class="weui-article__p" style="display: flex;flex-direction: row;align-content: space-around; align-items: center;">
+          <image wx:if="{{question.image1}}" class="weui-article__img" src="{{question.image1}}" mode="aspectFit" style="height: 300rpx; width: 46%;" />
+          <image wx:if="{{question.image2}}" class="weui-article__img" src="{{question.image2}}" mode="aspectFit" style="height: 300rpx; width: 46%;" />
+          <image wx:if="{{question.image3}}" class="weui-article__img" src="{{question.image3}}" mode="aspectFit" style="height: 300rpx; width: 46%;" />
+          <video wx:if="{{question.video}}" src="{{question.video}}" binderror="videoErrorCallback" danmu-list="" style="height: 300rpx; width: 46%;" />
+        </view>
+        {{question.content}}
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{isAnswered}}" class="page__hd">
+    <view class="page__title">服饰搭配方案：</view>
+    <view class="page__desc">顾问：{{consultant_name}}</view>
+    <view class="page__desc">解答时间：{{design.updatedAt}}</view>
+  </view>
+  <view wx:if="{{isAnswered}}" class="page__bd">
+    <view class="weui-article" style="padding-left:15rpx; padding-right:15rpx;background-color:white;">
+
+      <view wx:if="{{design.result}}" class="weui-article__section" style="margin-bottom:20rpx;">
+        <view class="weui-article__h3">▷　整体设计图片：</view>
+        <view class="weui-article__p" style="display: flex;flex-direction: row;align-content: center; align-items: center;">
+          <image class="weui-article__img" src="{{design.result}}" mode="aspectFit" bindtap="previewImage" id="{{design.result}}" style="height: 420rpx" />
+        </view>
+        <view class="weui-article__h3">▷　设计思路与注意事项：</view>
+        <view class="weui-article__p">
+          {{design.content}}。
+        </view>
+        <view class="weui-panel">
+          <view class="weui-panel__hd">▶　推荐服饰单品链接</view>
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells weui-cells_in-small-appmsg">
+                <block wx:for="{{costumes}}" wx:key="index">
+                  
+
+                    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tz' data-type="{{item.name.name}}"> 
+
+                    <view class="weui-cell__bd weui-cell_primary">
+                      <view class='map_text'>{{item.name.name}}</view>
+                    </view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+                    </view>     
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{question.status==2||question.status==4||question.status==6}}" style="margin:20rpx 0 20rpx; display:flex; justify-content:center; align-items:center;">
+      <button type="primary" plain="true" bindtap="satisfied" style="height:100rpx;width:250rpx;" data-satisfied="yes">满　　意</button>
+      <button wx:if="{{question.type==1}}" type="warn" plain="true" bindtap="unsatisfied" style="height:100rpx;width:250rpx;display:flex;justify-content:center; align-items:center;" data-satisfied="no">找新方案</button>
+    </view>
+  </view>
+</view>

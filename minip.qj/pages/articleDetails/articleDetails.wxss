@@ -1,0 +1,8 @@
+/* pages/collocation/collocation-details/collocation-details.wxss */
+page{
+    background-color: #FFFFFF;
+    margin: 0 15rpx;
+}
+image{
+    margin: 4px 0;
+}

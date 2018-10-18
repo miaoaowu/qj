@@ -1,0 +1,133 @@
+<!--pages/shops/shops.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <!-- 选项一的内容 -->
+          <view class="shop-container">
+            <!-- <scroll-view scroll-y="true"> -->
+
+            <!-- 导航栏 -->
+            <view class="navigation">
+              <!-- <scroll-view scroll-y="true" style="height:1000rpx"> -->
+              <block wx:for="{{goodsList1}}" wx:key="index">
+                <text class="navgoods {{currentTab1==item.id?'active':''}}" bindtap="changeNav1" data-currentab="{{item.id}}">{{item.name}}</text>
+              </block>
+              <view class="bottom">
+              </view>
+              <!-- </scroll-view> -->
+            </view>
+            <!-- </scroll-view> -->
+
+            <!-- 商品列表 -->
+            <view class="content">
+              <scroll-view scroll-y="true" style="height:90vh">
+                <block wx:for="{{classifyList1[currentTab1]}}" wx:key="index">
+                  <view class="goods">
+                    <image src="{{item.url}}" />
+                    <view class="mes">
+                      <text class="goodsName">{{item.name}}</text>
+                      <text class="goodsIntroduce">{{item.introduce}}</text>
+                      <view class="special">
+                        <text class="goodsprice">¥{{item.price}}</text>
+                        <text class="num">hot：{{item.num}}</text>                        
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+
+          </view>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <!-- 选项二的内容 -->
+          <view class="shop-container">
+            <!-- <scroll-view scroll-y="true"> -->
+
+            <!-- 导航栏 -->
+            <view class="navigation">
+              <!-- <scroll-view scroll-y="true" style="height:1000rpx"> -->
+              <block wx:for="{{goodsList2}}" wx:key="index">
+                <text class="navgoods {{currentTab2==item.id?'active':''}}" bindtap="changeNav2" data-currentab="{{item.id}}">{{item.name}}</text>
+              </block>
+              <view class="bottom">
+              </view>
+              <!-- </scroll-view> -->
+            </view>
+            <!-- </scroll-view> -->
+
+            <!-- 商品列表 -->
+            <view class="content">
+              <scroll-view scroll-y="true" style="height:90vh">
+                <block wx:for="{{classifyList2[currentTab2]}}" wx:key="index">
+                  <view class="goods">
+                    <image src="{{item.url}}" />
+                    <view class="mes">
+                      <text class="goodsName">{{item.name}}</text>
+                      <text class="goodsIntroduce">{{item.introduce}}</text>
+                      <view class="special">
+                        <text class="goodsprice">¥{{item.price}}</text>
+                        <text class="num">hot：{{item.num}}</text>                        
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+
+          </view>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <!-- 选项三的内容 -->
+          <view class="shop-container">
+            <!-- <scroll-view scroll-y="true"> -->
+
+            <!-- 导航栏 -->
+            <view class="navigation">
+              <!-- <scroll-view scroll-y="true" style="height:1000rpx"> -->
+              <block wx:for="{{goodsList3}}" wx:key="index">
+                <text class="navgoods {{currentTab3==item.id?'active':''}}" bindtap="changeNav3" data-currentab="{{item.id}}">{{item.name}}</text>
+              </block>
+              <view class="bottom">
+              </view>
+              <!-- </scroll-view> -->
+            </view>
+            <!-- </scroll-view> -->
+
+            <!-- 商品列表 -->
+            <view class="content">
+              <scroll-view scroll-y="true" style="height:90vh">
+                <block wx:for="{{classifyList3[currentTab3]}}" wx:key="index">
+                  <view class="goods">
+                    <image src="{{item.url}}" />
+                    <view class="mes">
+                      <text class="goodsName">{{item.name}}</text>
+                      <text class="goodsIntroduce">{{item.introduce}}</text>
+                      <view class="special">
+                        <text class="goodsprice">¥{{item.price}}</text>
+                        <text class="num">hot：{{item.num}}</text>                        
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

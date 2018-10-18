@@ -1,0 +1,87 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view style='width:90%;margin-left:20px'>
+    <textarea name="content" class='txta' style='height:280rpx;' placeholder='问得好,才能答得好:1、太大的问题应避免！例如：“我该怎么穿？”改为“我的这条裙子怎么搭配？”2、一次问一个问题！如一次提出多个问题，顾问一般针对第一个问题回复！' value='{{question.content}}' placeholder-class='textarea-holder' bindinput='bindContentInput'></textarea>
+    <view style="display:flex;">
+      <view wx:if="{{question.imageURL1.length == 0}}" class='upload' bindtap='uploadImage1'>
+        <image class='img' src='/image/添加图片.png'></image>
+        <text style="font-size:12px;color:#aaa">上传图片</text>
+      </view>
+
+      <view wx:else class='up_image'>
+        <image src='{{question.imageURL1}}' class='uploadImage' bindtap='uploadImage1'></image>
+        <icon class='deleteImage' type='clear' catchtap='deleteImage1'></icon>
+      </view>
+      <view wx:if="{{question.imageURL1.length != 0}}">
+        <view wx:if="{{question.imageURL2.length == 0}}" class='upload' style="margin-left:5px" bindtap='uploadImage2'>
+          <image src='/image/添加图片.png'></image>
+          <text style="font-size:12px;color:#aaa">上传图片</text>
+        </view>
+        <view wx:else class='up_image'>
+          <image src='{{question.imageURL2}}' class='uploadImage' style="margin-left:5px" bindtap='uploadImage2'></image>
+          <icon class='deleteImage' type='clear' catchtap='deleteImage2'></icon>
+        </view>
+      </view>
+      <view wx:if="{{question.imageURL2.length != 0}}">
+        <view wx:if="{{question.imageURL3.length == 0}}" class='upload' style="margin-left:5px" bindtap='uploadImage3'>
+          <image src='/image/添加图片.png'></image>
+          <text style="font-size:12px;color:#aaa">上传图片</text>
+        </view>
+        <view wx:else class='up_image'>
+          <image src='{{question.imageURL3}}' class='uploadImage' style="margin-left:5px" bindtap='uploadImage3'></image>
+          <icon class='deleteImage' type='clear' catchtap='deleteImage3'></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dividingstrip" />
+  <view class="navigator">
+    <view class="navigator-text" style='width:40%;margin-left:10px'>选择场合</view>
+    <view style='width:60%;position: absolute;left:340rpx;'>
+      <picker name="occasion" value="{{question.occasion.selectedIndex}}" range="{{question.occasion.list}}" bindchange="bindOccasionChange">
+        <view style='color:#52BEFF;margin-left:230rpx'>{{question.occasion.list[question.occasion.selectedIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:40%;margin-left:10px'>当地气温</view>
+    <view style='width:60%;position: absolute;left:340rpx;'>
+      <picker name="temperature" value="{{question.occasion.selectedIndex}}" range="{{question.temperature.list}}" bindchange="bindTemperatureChange">
+        <view style='color:#52BEFF;margin-left:230rpx'>{{question.temperature.list[question.temperature.selectedIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  
+  <view class="dividingstrip" />
+  <view class="navigator">
+    <view class='type'>
+      <radio-group name='type' bindchange="radioChange">
+        <text class='txt'>一元提问</text>
+        <radio class='rad' style='float:right' value='1' color='#31B5FE' checked="{{question.question_type=='1'}}" />
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="navigator">
+    <view class='type'>
+      <radio-group name='type' bindchange="radioChange">
+        <text class='txt'>选择顾问</text>
+        <radio class='rad' value='2' color='#31B5FE' checked="{{question.question_type=='2'}}" />
+      </radio-group>
+    </view>
+  </view>
+
+  <block wx:if="{{question.question_type=='2'}}">
+    <view class="info">
+      <text>已选 “{{question.consultant.name}}” 顾问</text>
+      <view class="nav"></view>
+    </view>
+  </block>
+
+  <view style='display:flex; justify-content: center;margin-top:50rpx'>
+    <button formType="submit" type="primary" style='width:400rpx;background:#31B5FE;font-size:85%'>提交问题</button>
+  </view>
+
+</form>

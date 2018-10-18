@@ -1,0 +1,17 @@
+<button bindtap="jumpToIndex"> 打开index页面 </button>
+
+<view class="container">
+  <text class="topic-group">当前用户信息</text>
+  <text wx:if="{{!hasUserInfo}}"> 没有获取到用户信息 </text>
+  <block wx:else>
+    <text wx:for="{{userInfo}}" wx:key="*this">{{index}}: {{item}}</text>
+  </block>
+
+  <button bindtap="storeUserInfo" type="primary">存储用户信息</button>
+  <view wx:for="{{requestData}}" wx:key="*this">{{index}}: {{item}}</view>
+
+  <input bindinput="bindInput" placeholder="用户名" value="{{inputValue}}"/>
+  <button bindtap="finduser" type="primary" >根据用户名查找</button>
+  <view wx:for="{{findData}}" wx:key="*this">{{index}}: {{item}}</view>
+
+</view>

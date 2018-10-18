@@ -1,0 +1,15 @@
+<!--pages/help/help.wxml-->
+<view class="page" style="height: 100%; background-color: ghostwhite;top:1px;margin-top:15px">
+  <view class="mod-list">
+  <view class='mod-list-title'>热点问题</view>
+  <view class="faq_section">
+    <view class="weui-cells weui-cells_after-title" wx:for="{{names}}" wx:key="{{item.viewid}}">
+    <view data-num='{{item.viewid}}' bindtap='open' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{item.name}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+  
+    </view>
+    </view>
+  </view>
+</view>

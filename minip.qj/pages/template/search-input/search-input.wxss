@@ -1,0 +1,16 @@
+
+.search-input{
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255,1);
+  border-radius: 10rpx;
+}
+
+.weui-search-bar .inputplaceholder{
+  display: inline-block;
+  height: 32px;
+  line-height:32px; 
+  font-size: 16px;
+  color: #aaa;
+  padding: 2rpx 0;
+} 

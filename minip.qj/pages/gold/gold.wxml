@@ -1,0 +1,67 @@
+<view>
+  <view style='margin-left:20px;display: flex; flex-direction: row;align-items: center;font-size:14px;'>金币数量（{{gold-coupon[0].value*coupon[0].number-coupon[1].value*coupon[1].number-coupon[2].value*coupon[2].number}}）</view>
+  <view class='notice'>金币可兑换下列类别优惠卷，优惠券有效期1个月</view>
+  <block wx:for="{{coupon}}" wx:key="id">
+    <view class='section'>
+      <view class="couponDefault">
+        <view class='left'>
+        <view wx:if="{{item.type=='11'}}" style='color:#64E5F4'>¥{{item.value/100}}</view>
+        <view wx:elif="{{item.type=='12'}}" style='color: #F0D290'>¥{{item.value/100}}</view>
+        
+                <view wx:else style='color:#4EDEFF'>¥{{item.value/100}}</view>
+                        </view>
+                        
+                                 <!-- <view class='right'>
+                                           <view wx:if="{{item.type=='11'}}" class='type1'>形象测试专项券</view>
+                                                     <view wx:elif="{{item.type=='12'}}" class='type2'>私人衣橱专项券</view>}}" style='color: #F0D290'>¥{{item.value/100}}</view>
+        <view wx:else style='color:#4EDEFF'>¥{{item.value/100}}</view>
+        </view>
+
+         <!-- <view class='right'>
+          <view wx:if="{{item.type=='11'}}" class='type1'>形象测试专项券</view>
+          <view wx:elif="{{item.type=='12'}}" class='type2'>私人衣橱专项券</view>
+          <view wx:else class='type3'>咨询抵现卷</view>
+          <view class='effectiveData'>
+            <view>有效期至</view>
+            <view>{{item.endtime}}</view>
+          </view>
+        </view>  -->
+ 
+     <view wx:if="{{item.type=='11'}}" class='right'>
+      <view class='type1'>形象测试专项券</view>
+      <view class='effectiveData'>
+            <view>有效期至</view>
+            <view>{{item.endtime}}</view>
+          </view>
+     </view>
+
+     <view wx:elif="{{item.type=='12'}}" class='right1'>
+      <view class='type1'>私人衣橱专项券</view>
+      <view class='effectiveData'>
+            <view>有效期至</view>
+            <view>{{item.endtime}}</view>
+          </view>
+     </view>
+
+     <view wx:else class='right2'>
+      <view class='type1'>咨询抵现卷</view>
+      <view class='effectiveData'>
+            <view>有效期至</view>
+            <view>{{item.endtime}}</view>
+          </view>
+     </view>
+
+      </view>
+      <view class='changenumber'>
+        <button type='default' disabled='{{item.number==0}}' data-id="{{index}}" bindtap="minusCount">-</button>
+        <view class='number'>{{item.number}}</view>
+        <button type='default' disabled='{{(gold-coupon[0].value*coupon[0].number-coupon[1].value*coupon[1].number-coupon[2].value*coupon[2].number)<item.value}}' data-id="{{index}}" bindtap="addCount">+</button>
+      </view>
+    </view>
+  </block>
+  <view class='notice'>每100个金币折合1元人民币</view>
+  <view class='notice'>(每日登陆自动获得20个金币)</view>
+  <view style='display:flex; justify-content: center;margin-top:50rpx'>
+    <button type="default" style='width:400rpx;background:#31B5FE;color:#FFFFFF;font-size:15px;' bindtap='confirm'>提交</button>
+  </view>
+</view>

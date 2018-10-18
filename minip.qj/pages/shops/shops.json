@@ -1,0 +1,7 @@
+{
+        "backgroundTextStyle": "balck",
+        "navigationBarBackgroundColor": "#31B5FF",
+        "navigationBarTitleText": "形象咨询",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh":true
+}

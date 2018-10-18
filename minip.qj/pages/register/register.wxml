@@ -1,0 +1,29 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="navigator" style='height:200rpx'>
+    <view class="navigator-text">{{userInfo.city}}</view>
+    <view style='display: flex;flex-direction: column;align-items: center;'>
+      <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar' background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class="navigator">
+    <view style='width:30%;font-size:16px;'>姓名</view>
+    <view class='setright'>
+      <input name="name" type='text'  placeholder-style='color:#31B5FE;font-size:16px'  placeholder='请输入您的姓名' />
+    </view>
+
+  </view>
+
+  <view class="navigator">
+    <view style='width:30%;font-size:16px'>手机号码</view>
+    <view class='setright'>
+      <input name="mobile" type='number' placeholder-style="color:#31B5FE;font-size:16px" placeholder='请输入手机号码' bindblur="mobileBlur" />
+    </view>
+  </view>
+  
+  <view style='display:flex; justify-content: center;margin-top:30rpx'>
+    <button formType="submit" style='width:80%;background:rgb(49,181,255);color:#FFFFFF;font-size:16px' type="{{btnstate}}" >注册并领取新人大礼包</button>
+  </view>
+
+</form>

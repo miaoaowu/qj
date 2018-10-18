@@ -1,0 +1,72 @@
+<view class="page" style="background:{{pageBackgroundColor}}">
+    <block>
+      <view class='head'>
+        <view>       
+           <image  src="{{consultant.avata}}" class="userinfo-avatar" background-size="cover"></image>
+           <view style='float:left;margin-top:10px;'>
+           <text class='name'>{{consultant.name}}</text>
+           <!-- <text class='name'>{{consultant.id}}号</text> -->
+           </view>
+           
+           
+         </view> 
+
+          <view >
+             <!-- <view wx:if="{{consultant.title=='金牌'}}" >
+                <image src='../../image/gold.png' class='goldimage'></image>
+                </view>
+              <view wx:elif="{{consultant.title=='银牌'}}">
+                <image src='../../image/silver.png' class='goldimage'></image>
+                </view>
+              <view wx:if="{{consultant.title=='铜牌'}}">
+                <image src='../../image/cuprum.png' class='goldimage'></image>
+                </view> -->
+                 <!-- <view wx:if='{{consultant.title}}'>{{consultant.title}}</view>
+                 <view wx:else>未定级</view> -->
+                
+         </view> 
+            <view class='nametype'>{{nametype}}</view> 
+        </view> 
+
+      <!-- <view class="hr"></view>  -->
+      <view class='item1'>
+        <view style='font-size:14px;'><text style='font-size:25px;'>{{consultant.consultation_fees}}</text>元/次</view>
+          <view style='font-size:14px;'>图文咨询费用</view>
+         
+      </view>
+      <!-- <view class="hr"></view> -->
+      <view class='item'>
+          <view style='font-size:14px;'><text style='font-size:25px;'>{{consultant.experience_fees}}</text>元/次</view>
+           <view style='font-size:14px;'>线下服务费用</view>
+      </view>
+      <!-- <view class="hr"></view> -->
+
+  
+      <view class='item2'>
+          <view class='reasontitle'>推荐理由</view>
+          <scroll-view scroll-y style="height:45vh;padding:5px;width:650rpx; "  >
+             <text class='reason' wx:if='{{consultant.recommended_reason}}'>{{consultant.recommended_reason}}</text>
+          </scroll-view>   
+     
+     
+      <view class='section'> 
+         <view>   
+          <view wx:if='{{!follow}}' class='follow'  bindtap='follow'>
+              <image src="/image/follow.png"   class="followImage"></image>
+              <text style="font-size:12px;color:#aaa">关注</text>
+           </view> 
+            <view wx:else' class='follow'  bindtap='unfollow'>
+              <image src="/image/unfollow.png"   class="followImage"></image>
+              <text style="font-size:12px;color:#aaa">取消关注</text>
+            </view> 
+        </view>  
+         <button  class='btn'  style=' background: {{btnColor}}'  bindtap='askQuestion'>图文咨询(¥{{consultant.consultation_fees}}元/次)</button>     
+      </view>      
+   </view> 
+   </block>
+  </view>
+   
+
+
+
+

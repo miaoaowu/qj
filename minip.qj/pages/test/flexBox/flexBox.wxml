@@ -1,0 +1,12 @@
+<!--pages/test2/test2.wxml-->
+<view class="title">小程序布局示例</view>
+<view class="main">
+  <view class="item item1"><text>1</text></view>
+  <view class="item item2">2</view>
+  <view class="item item3">item-3</view>
+  <view class="item item4">4</view>
+  <view class="item item5">5</view>
+  <view class="item item6">6</view>
+  <view class="item item7">7</view>
+  <view class="item item8">8</view>
+</view>

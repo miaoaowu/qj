@@ -1,0 +1,89 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/balance/balance",
+    "pages/showGoods/showGoods",
+    "pages/help/help",
+    "pages/register/register",
+    "pages/helpMessage/helpMessage",
+    "pages/declaration/declaration",
+    "pages/consult/consult",
+    "pages/article/article",
+    "pages/shops/shops",
+    "pages/member/member",
+    "pages/balanceDetail/balanceDetail",
+    "pages/test/test",
+    "pages/search/index",
+    "pages/test/accessDB/accessDB",
+    "pages/test/changeAuthorize/changeAuthorize",
+    "pages/test/logs/logs",
+    "pages/test/flexBox/flexBox",
+    "pages/test/webview/webview",
+    "pages/articleDetails/articleDetails",
+    "pages/wardrobe/wardrobe",
+    "pages/addWardrobe/addWardrobe",
+    "pages/record/record",
+    
+    "pages/collocation/collocation",
+    "pages/collocationDetails/collocationDetails",
+    "pages/ask/ask",
+    "pages/consultant/consultant",
+    "pages/consultantDetail/consultantDetail",
+    "pages/payment/payment",
+    "pages/setting/setting",
+    "pages/feedback/feedback",
+    "pages/showAD/showAD",
+    "pages/imageTest/imageTest",
+    "pages/paymentConfirm/paymentConfirm",
+    "pages/wardrobePayment/wardrobePayment",
+    "pages/wardrobePaymentConfirm/wardrobePaymentConfirm",
+    "pages/showCostume/showCostume",
+    "pages/showCostumes/showCostumes",
+    "pages/coupon/coupon",
+    "pages/myfollow/myfollow",
+    "pages/modifyRecord/modifyRecord",
+    "pages/gold/gold", 
+    "pages/showArticles/showArticles",
+    "pages/flogin/flogin"
+    
+    
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "形象咨询",
+        "iconPath": "image/consult.png",
+        "selectedIconPath": "image/consult_on.png"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "text": "服饰搭配",
+        "iconPath": "image/collocation.png",
+        "selectedIconPath": "image/collocation_on.png"
+      },
+      {
+        "pagePath": "pages/shops/shops",
+        "text": "商家平台",
+        "iconPath": "image/shops.png",
+        "selectedIconPath": "image/shops_on.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "个人中心",
+        "iconPath": "image/member.png",
+        "selectedIconPath": "image/member_on.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "奇纪时尚",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

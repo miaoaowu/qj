@@ -1,0 +1,97 @@
+<!--pages/imageTest/imageTest.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title" style='text-align:center'>个人风格和体型定位测试</view>
+    <view class="page__desc">欢迎参加本次测试，您的个人信息将会严格保密！</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article" style="padding-left:15rpx; padding-right:15rpx;">
+
+      <!-- 循环对question_data中的各种题型进行解析  -->
+      <view class="weui-article__section" style="margin-bottom:20rpx;" wx:for="{{question_data}}" wx:key="{{index}}">
+
+        <!-- 图片题处理  -->
+        <view class="weui-panel" wx:if="{{item.question_type=='图片'}}">
+          <view class="weui-article__title">测试告知</view>
+          <view class="weui-article__h3">
+            {{item.question_value}}
+          </view>
+          <view class="question">
+            <view class="question_item" wx:for="{{item.question_options}}" wx:key="{{index}}">
+              <image class="weui-article__img" src="{{basic_url+item.src}}" mode="aspectFit" style="height: 300rpx;width: 300rpx;" />
+              <text>{{item.alt}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- 上传文件题处理  -->
+        <view class="weui-panel" wx:if="{{item.question_type=='选择文件'}}">
+          <view class="weui-article__title">【第{{item.question_number}}题】</view>
+          <view class="weui-article__h3">
+            {{item.question_value}}
+          </view>
+          <view class="question">
+            <view class="question_item">
+              <button class="mini-btn" type="default" size="mini" bindtap='didPressChooesImage' data-i="{{index}}">上传图片</button>
+              <image class="image" src="{{item.question_model}}" mode="aspectFit" style="height: 300rpx;width: 300rpx;" />
+            </view>
+          </view>
+        </view>
+
+        <!-- 填空题处理  -->
+        <view class="weui-panel" wx:if="{{item.question_type=='填空'}}">
+          <view class="weui-article__title">【第{{item.question_number}}题】</view>
+          <view class="weui-article__h3">
+            {{item.question_value}}
+          </view>
+          <view class="question">
+            <input class="weui-input" maxlength="20" placeholder="在此处填写答案" value="{{item.question_model}}" bindinput="bindKeyInput" data-i="{{index}}" />
+          </view>
+        </view>
+
+        <!-- 单选题处理  -->
+        <view class="weui-panel" wx:if="{{item.question_type=='单选'}}">
+          <view class="weui-article__title">【第{{item.question_number}}题】</view>
+          <view class="weui-article__h3">
+            {{item.question_value}}
+          </view>
+          <radio-group bindchange="radioChange" data-i="{{index}}">
+            <label class="weui-cell weui-check__label" wx:for="{{item.question_options}}" wx:key="{{item.value}}" value="{{item.value}}">
+              <view class="weui-cell__hd">
+                <radio value="{{item.value}}" checked="{{item.checked}}" />
+              </view>
+              <view class="question">
+                <image src="{{basic_url+item.src}}" wx:if="{{item.src}}" mode="aspectFit" style="height: 300rpx;width: 300rpx; margin-right: 15rpx;"></image>
+                <view class="weui-cell__bd">{{item.value}}</view>
+              </view>
+            </label>
+          </radio-group>
+        </view>
+
+        <!-- 多选题处理  -->
+        <view class="weui-panel" wx:if="{{item.question_type=='复选'}}">
+          <view class="weui-article__title">【第{{item.question_number}}题】</view>
+          <view class="weui-article__h3">
+            {{item.question_value}}
+          </view>
+          <checkbox-group bindchange="checkboxChange" data-i="{{index}}">
+            <label class="weui-cell weui-check__label" wx:for="{{item.question_options}}" wx:key="{{item.value}}" value="{{item.value}}">
+              <view class="weui-cell__hd">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+              </view>
+              <view class="question">
+                <image src="{{basic_url+item.src}}" wx:if="{{item.src}}" mode="aspectFit" style="height: 300rpx;width: 300rpx; margin-right: 15rpx;"></image>
+                <view class="weui-cell__bd">{{item.value}}</view>
+              </view>
+            </label>
+          </checkbox-group>
+        </view>
+
+      </view>
+      <view class="buttons">
+        <button type="primary" size='mini' plain="true" bindtap="testSubmit">提交</button>
+        <button type="warn" size='mini' plain="true" bindtap="testReset">重置</button>
+      </view>
+    </view>
+  </view>
+</view>

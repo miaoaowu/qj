@@ -1,0 +1,5 @@
+<!--pages/question/question.wxml-->
+<view class='wapper'>
+<view class='q-title'>{{name}}</view>
+<view class='q-content'>{{content}}</view>
+</view>

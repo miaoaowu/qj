@@ -1,0 +1,144 @@
+page{
+   /* background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(rgba(	0,191,255,0.7)), to(rgba(238,130,238, 0.4)));  */
+
+      /* background: linear-gradient(120deg, rgb(55,180,255),rgb(197,164,252));     */
+}
+.page {
+  display: block;
+  
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height:100rpx;  
+  border-radius: 50%;
+  float: left;
+  margin-left: 20px;
+}
+
+.name{ 
+  text-align: center;
+  padding-left: 40rpx;
+}
+
+.nametype{
+  font-size: 14px;
+  width: 36%;
+}
+.goldimage{
+   width: 35px;
+  height: 45px;
+  display: flex
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.head{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 15%;
+  padding: 10px;
+  color: white;
+}
+
+
+
+ .item{
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 20px;
+  padding: 15px; */
+  display: inline-block;
+
+  margin-left: 200rpx;
+  color: white
+} 
+.item1{
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 20px;
+  padding: 15px; */
+  display: inline-block;
+
+  margin-left: 80rpx;
+  color: white
+} 
+.reasontitle{
+ text-align: center;
+}
+.reason{
+ padding-left: 20rpx;
+ padding-right: 20rpx;
+ font-size: 16px;
+ color: #666666
+}
+
+.item2{
+  display: flex;
+  flex-direction: column;  
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  /* position: absolute; */
+  padding: 10px;
+ background-color: white;
+ border-radius: 5%;
+ height: 75%;
+}
+
+
+.hr{
+    height: 2px;
+    background-color: #cccccc;
+    opacity: 0.2;  
+}
+.btn{
+  font-size: 14px;
+}
+
+
+.section{
+  
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  /* position: absolute; */
+  right: 10rpx;
+  bottom: 40rpx;
+  text-align: center
+}
+.follow{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}
+.followImage{
+  width: 50rpx;
+  height:50rpx;
+}
+.btn{
+  margin-top: 20px;
+  width: 75%;
+  
+}
+button{
+  color: #FFFFFF
+}
+

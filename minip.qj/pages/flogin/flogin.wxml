@@ -1,0 +1,46 @@
+<!--pages/flogin/flogin.wxml-->
+<view class='page'>
+  <view class='ticket'>
+    <text>优惠券</text>
+  </view>
+  <view class="couponDefault">
+    <view class='left'>¥2998</view>
+    <view class='right'>
+      <view class='type1'>风格测试专项券</view>
+    </view>
+  </view>
+
+  <view class="couponDefault">
+    <view class='left'>¥1988</view>
+    <view class='right1'>
+      <view class='type1'>体型测试专项券</view>
+    </view>
+  </view>
+
+  <view class="couponDefault">
+    <view class='left'>4*¥1</view>
+    <view class='right2'>
+      <view class='type1'>私人衣橱专项券</view>
+    </view>
+  </view>
+  <view class="couponDefault">
+    <view class='left'>2*¥5</view>
+    <view class='right2'>
+      <view class='type1'>私人衣橱专项券</view>
+    </view>
+  </view>
+
+  <!-- <view class="couponDefault">
+    <view class='left'>2*¥1</view>
+    <view class='right2'>
+      <view class='type1'>形象咨询专项券</view>
+    </view>
+  </view> -->
+
+</view>
+
+<view class='rule'>
+  <view>
+    <text>恭喜您领取<text class='rules'>5000元</text>奇纪形象大礼包!</text>
+  </view>
+</view>

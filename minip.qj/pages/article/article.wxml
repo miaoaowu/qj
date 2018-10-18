@@ -1,0 +1,49 @@
+<!--pages/collocation/collocation.wxml-->
+<view class="search">
+</view>
+
+<view class="choose">
+
+  <view class="section">
+    <!-- <view class="section__title">选择类型</view> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{ctype}}" data-column="ctype">
+      <view class="picker">
+        文章
+        <image class='img' src="../../image/展开.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- <view class="sep">|</view> -->
+  <view class="section">
+    <!-- <view class="section__title">选择品牌</view> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{brand}}" data-column="brand">
+      <view class="picker">
+        视频
+        <image class='img' src="../../image/展开.png"></image>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class="page">
+  <view class="page__bd">
+    <scroll-view scroll-y bindscrolltolower="lower" class="show" style="height: 98vh;">
+      <view class="list">
+        <block wx:for="{{articles}}" wx:key="{{index}}">
+          <view bindtap='preview' class='nav' data-num="{{index}}">
+            <view class="item" id="0">
+              <view class="pic" id="{{item.picture}}">
+                <image mode="aspectFit" src="{{item.image}}"></image>
+              </view>
+              <view class="desc" id="{{index}}">
+                <view class="name">{{item.title}}</view>
+                <view class='updated'>{{item.updatedAt}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

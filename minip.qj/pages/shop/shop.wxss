@@ -1,0 +1,126 @@
+/* pages/shops/shops.wxss */
+
+.shop-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.navigation {
+  width: 25%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.navigation .navgoods {
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+  line-height: 100rpx;
+  border-right: 1rpx solid rgb(185, 182, 182);
+}
+
+.navigation .navgoods.active {
+  margin-right: -2rpx;
+  margin-left: -2rpx;
+  color: black;
+  background-color: white;
+  border-right: 0 solid;
+  border-top: 1rpx solid rgb(185, 182, 182);
+  border-bottom: 1rpx solid rgb(185, 182, 182);
+}
+
+.bottom {
+  width: 100%;
+  height: 100%;
+  border-right: 1rpx solid rgb(185, 182, 182);
+}
+
+.content {
+  width: 75%;
+  height: 90vh;
+  /* background-color: sandybrown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: 1rpx;
+}
+
+.content .goods {
+  width: 100%;
+  height: 200rpx;
+  /* background-color: silver; */
+  border-bottom: 1rpx solid rgb(185, 182, 182);
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.content .goods image {
+  width: 30%;
+  height: 180rpx;
+  margin: 10rpx;
+  /* background-color: seagreen; */
+}
+
+.content .goods .mes {
+  width: 65%;
+  height: 200rpx;
+  /* background-color: rgb(157, 189, 190); */
+  display: flex;
+  flex-direction: column;
+}
+
+.content .goods .mes .goodsName {
+  width: 100%;
+  font-size: 35rpx;
+}
+
+.content .goods .mes .goodsIntroduce {
+  width: 100%;
+  color: rgb(185, 161, 161);
+  font-size: 28rpx;
+}
+
+.content .goods .mes .special {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.content .goods .mes .special .goodsprice {
+  width: 30%;
+  color: rgb(255, 94, 0);
+  font-size: 30rpx;
+}
+
+.content .goods .mes .special .hot {
+  width: 30%;
+  border: 2rpx solid rgb(255, 60, 0);
+  color: rgb(255, 94, 0);
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.content .goods .mes .special .num {
+  width: 25%;
+  height: 30rpx;
+  border: 2rpx solid rgb(255, 60, 0);
+  color: rgb(255, 60, 0);
+  font-size: 20rpx;
+  line-height: 30rpx;
+  text-align: center;
+}

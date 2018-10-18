@@ -1,0 +1,52 @@
+<view class='wrapper'>
+  <block wx:for="{{tapIndex}}" wx:key="item.index">
+    <view class='content'>
+      <view class="image-container img{{index}}" data-id="{{index}}">
+        <view class='img-box' data-id='{{index}}' bindtap='didPressChooesImage'>
+          <image class="image" src="{{delData[index].imageURL ? delData[index].imageURL : addImg}}" mode="aspectFit"></image>
+        </view>
+        <text class='imageupload'>* 传服饰图片</text>
+        <text class='num'>{{index+1}}</text>
+      </view>
+      <view class='wardrobe-container'>
+        <view class="wardrobeItem">
+          <view class="label">* 选择类别</view>
+          <view class="input">
+            <picker name="wardrobeType" id="{{index}}" value="{{delData[index].TypeIndex}}" range="{{typeList}}" bindchange="bindTypeChange">
+              <view class='defaultcolor'>{{delData[index].TypeList[delData[index].TypeIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="wardrobeItem">
+          <view class="label">* 选择材质</view>
+          <view class="input">
+            <picker name="wardrobeTexture" id="{{index}}" value="{{delData[index].TextureIndex}}" range="{{texture}}" bindchange="bindTextureChange">
+              <view class='defaultcolor'>{{delData[index].TextureList[delData[index].TextureIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="wardrobeItem">
+          <view class="label">* 描述</view>
+          <view class="input">
+            <input type='text' id="{{index}}" placeholder-style="color:#ccc" bindinput='bindLengthInput' placeholder='描述内容' value='{{delData[index].len}}'></input>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='added'>
+    <view class="wardrobeItem">
+      <view class="label">已添加</view>
+      <view class="input">
+        {{tapIndex}}
+      </view>
+    </view>
+  </view>
+  <view class='del-add'>
+    <view class="up1" bindtap='detele'>删除</view>
+    <view class="up2" bindtap='add'>增加</view>
+  </view>
+  <view class="upload">
+    <button class='btn' type="default" style='width:60%;background:rgb(49,181,255);color:#FFFFFF;font-size:16px;' bindtap='submit'>确认添加服饰</button>
+  </view>
+</view>

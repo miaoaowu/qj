@@ -1,0 +1,26 @@
+/* pages/declaration/declaration.wxss */
+.wrapper{
+  height: 100%;
+  width: 100%；
+}
+.header{
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.section{
+ font-size: 14px;
+ padding: 10px 15px 0 15px;
+}
+.title{
+
+}
+.passage{
+  text-indent:2em;
+  color: grey;
+}
+.footer{
+  text-align: right;
+  font-size: 14px;
+  margin-right: 15px;
+}

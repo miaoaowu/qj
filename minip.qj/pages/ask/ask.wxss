@@ -1,0 +1,163 @@
+userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.navigator-box {
+  opacity: 0;
+  position: relative;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 34rpx;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.navigator-box-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigator {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  border-bottom: 1rpx solid #d8d8d8;
+  font-size: 85%;
+}
+
+.navigator:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1px;
+  /* border-top: 1rpx solid #D8D8D8; */
+  color: #d8d8d8;
+}
+
+.navigator:first-child:before {
+  display: none;
+}
+
+.navigator-text {
+  flex: 1;
+}
+
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  /* border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid; */
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6e6e6;
+  margin-bottom: 5px;
+}
+
+.upload image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.uploadImage {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.type {
+  width: 80%;
+  display: flex;
+  /* justify-content: center */
+}
+
+.dividingstrip {
+  height: 25rpx;
+  background-color: whitesmoke;
+}
+
+.txt {
+  margin-left: -50rpx;
+}
+
+.rad {
+  margin-left: 400rpx;
+}
+
+.txta {
+  font-size: 80%;
+  margin-top: 25rpx;
+}
+
+img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.deleteImage {
+  position: absolute;
+  left: 110rpx;
+  top: -20rpx;
+}
+
+.up_image {
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 30rpx;
+}
+
+.uploadImage {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: relative;
+  width: 350rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  background: #f6f1b3;
+  box-shadow: 1px 2px 3px #e9d985;
+  border: 1px solid #dace7c;
+  border-radius: 4px;
+  text-align: center;
+  color: red;
+  margin-left: 30rpx;
+}
+
+.nav {
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  background: #f6f1b3;
+  border-left: 1px solid #dace7c;
+  border-top: 1px solid #dace7c;
+  transform: rotate(45deg);
+}

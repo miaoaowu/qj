@@ -1,0 +1,60 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="navigator" style='height:200rpx'>
+    <view class="navigator-text">{{userInfo.city}}</view>
+    <view style='display: flex;flex-direction: column;align-items: center;'>
+      <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar' background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:30%;font-size:16px;'>姓名</view>
+    <view class='setright'>
+      <input name="name" type='text'  placeholder-style='color:#31B5FE;font-size:16px'  placeholder='请输入您的姓名' />
+    </view>
+
+  </view>
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:30%;font-size:16px'>职业</view>
+    <view class='setright'>
+      <input name="profession" type='text' placeholder-style='color:#31B5FE;font-size:16px' placeholder='请输入您的职业' />
+    </view>
+  </view>
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:30%;font-size:16px'>性别</view>
+    <view class='setright'>
+      <radio-group name="sex" bindchange="radioChange" style='color:#000;'>
+        <label >
+          <radio value='0' style='transform:scale(0.8);  ' color='#31B5FE'>男　</radio>
+          <radio value='1' style='transform:scale(0.8);  ' checked='true' color='#31B5FE'>女</radio>
+        </label>
+      </radio-group>
+    </view>
+
+  </view>
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:30%;font-size:16px'>年龄区间</view>
+    <view class='setright'>
+      <picker name="age"  value="{{age_scope.selectedIndex}}" range="{{age_scope.list}}" bindchange="bindAgeScopeChange">
+        <view  style='color:#000000;font-size:16px'>{{age_scope.list[age_scope.selectedIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="navigator">
+    <view class="navigator-text" style='width:30%;font-size:16px'>手机号码</view>
+    <view class='setright'>
+      <input name="mobile" type='number' placeholder-style="color:#31B5FE;font-size:16px" placeholder='请输入手机号码' bindblur="mobileBlur" />
+    </view>
+  </view>
+  
+  <view style='display:flex; justify-content: center;margin-top:30rpx'>
+    <button formType="submit" style='width:80%;background:rgb(49,181,255);color:#FFFFFF;font-size:16px' type="{{btnstate}}" >修改个人档案</button>
+  </view>
+
+</form>

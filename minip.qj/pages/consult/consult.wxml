@@ -1,0 +1,63 @@
+<!--pages/consult/consult.wxml-->
+<import src="/pages/template/search-input/search-input.wxml" />
+<view class="weui-search-bar" bindtap='tabInput'>
+  <template is="search-input">
+  </template>
+</view>
+
+
+<view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+  <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">
+      <view>实时搜索文本</view>
+    </view>
+  </navigator>
+</view>
+
+<view class="container">
+  <view class="ad">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="rgba(64,201,228, 0.7)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="circular" class="adswiper">
+      <block wx:for="{{ad}}" wx:key="index">
+        <swiper-item bindtap="changeTo" data-where="{{item.url}}" data-id="{{index}}" data-adtype="{{item.type}}">
+          <image src="{{item.image}}" class="ad-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+  <view class="bts">
+    <view class="bt-up">
+      <button class='btn' bindtap="jumpToImagetest" style='background-color:#FFFFFF; margin: 0rpx 10rpx 0rpx 30rpx;'>
+        <image mode="scaleToFill" src="../../image/toTest.png"></image>
+        <text class='textType'>形象测试</text>
+      </button>
+      <button class='btn' bindtap="jumpToAsk" style='background-color:#FFFFFF;margin: 0rpx 0rpx 0rpx 0rpx;'>
+        <image mode="scaleToFill" src="../../image/toAsk.png"></image>
+        <text class='textType'>咨　询</text>
+      </button>
+      <button class='btn' bindtap="jumpToFindadvisor" style='background-color:#FFFFFF;margin: 0rpx 30rpx 0rpx 10rpx;'>
+        <image mode="scaleToFill" src="../../image/toConsultant.png"></image>
+        <text class='textType'>找 顾 问</text>
+      </button>
+    </view>
+    <view class="bt-down">
+      <image bindtap="jumpToWardrobe" mode="scaleToFill" src="../../image/toWardrobe.png"></image>
+    </view>
+
+  </view>
+</view>
+
+<!-- 自定义弹窗 -->
+<view class="showModule" wx:if="{{isShow}}">
+ <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
+  <view class='TopImage'>
+    <!-- <image src='../../image/no.png'></image> -->
+  </view>
+  <view class='module-bottom'>
+    <text class="title ">{{title}}</text>
+    <view class="text ">{{messages}}</view>
+    <button class='btn' type="default" bindtap='know'>我知道了</button>
+  </view>
+
+</view>
+
